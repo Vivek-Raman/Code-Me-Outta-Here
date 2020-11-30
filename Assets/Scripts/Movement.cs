@@ -2,7 +2,7 @@
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private LayerMask unwalkableMask;
+    [SerializeField] private LayerMask unwalkableMask = 1 << 9;
     private RaycastHit2D[] hits = new RaycastHit2D[2];
 
     public bool Move(Direction toMove)

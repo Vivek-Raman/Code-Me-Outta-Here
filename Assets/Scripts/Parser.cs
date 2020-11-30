@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Text;
+using UnityEngine;
 
 [CreateAssetMenu]
 public class Parser : ScriptableObject
 {
-    public int ParseCode(string code)
-    {
+    [NonSerialized] private Transform source = null;
+    [NonSerialized] private string[] splitCode = null;
+    [NonSerialized] private Command toExecute = null;
 
-        return 1;
-    }
+    
 }
